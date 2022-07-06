@@ -27,10 +27,7 @@ export default function Filmes({data}) {
       </View>
 
       <Modal animationType="slide" visible={visibleModal} transparent={true}>
-        <ModalScreen
-          filme={data}
-          voltar={()=> setVisibleModal(false)}
-        />
+        <ModalScreen filme={data} voltar={() => setVisibleModal(false)} />
       </Modal>
     </View>
   );
@@ -55,6 +52,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#202020',
     margin: 20,
     elevation: 2,
+    marginBottom: 20,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20
   },
   capa: {
     height: 250,
